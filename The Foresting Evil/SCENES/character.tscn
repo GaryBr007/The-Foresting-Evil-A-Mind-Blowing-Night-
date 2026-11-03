@@ -131,6 +131,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0879202, -0.09869194)
 [node name="Camera3D" type="Camera3D" parent="cabeça" unique_id=1033830822]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3588462, -0.07662928)
 
+[node name="SpotLight3D" type="SpotLight3D" parent="cabeça/Camera3D" unique_id=1013232589]
+transform = Transform3D(1, 0, 0, 0, 0.99993104, 0.011745796, 0, -0.011745796, 0.99993104, 0, -0.3588462, 0.07662928)
+light_energy = 5.0
+light_size = 2.0
+shadow_enabled = true
+spot_range = 8.0
+
 [node name="RayCasteto" type="RayCast3D" parent="." unique_id=1992826392]
 target_position = Vector3(0, 1, 0)
 

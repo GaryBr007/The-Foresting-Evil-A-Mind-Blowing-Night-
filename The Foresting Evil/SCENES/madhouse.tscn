@@ -2,25 +2,29 @@
 
 [ext_resource type="PackedScene" uid="uid://cl3jg7rul0dep" path="res://SCENES/character.tscn" id="1_0h1g7"]
 [ext_resource type="ArrayMesh" uid="uid://bpgej1hi0fvjd" path="res://ASSETS/terreno.obj" id="2_rj4ge"]
+[ext_resource type="ArrayMesh" uid="uid://h5n6rhsyjd1n" path="res://ASSETS/arvore3.obj" id="3_1fe1v"]
 [ext_resource type="PackedScene" uid="uid://dh7o6pn6bnkmj" path="res://ASSETS/3DMODELS/dino-bocchi-plushie-3d-scan/source/Dino Bocchi Plushie.glb" id="3_bljox"]
+[ext_resource type="ArrayMesh" uid="uid://b6h0vey5qit1x" path="res://ASSETS/arvore2.obj" id="4_cp7ig"]
 [ext_resource type="PackedScene" uid="uid://bgvxtbjek4h65" path="res://SCENES/hud.tscn" id="4_ksao8"]
 [ext_resource type="PackedScene" uid="uid://coqffsy257vh5" path="res://SCENES/canvas_layer.tscn" id="5_11v3b"]
 [ext_resource type="ArrayMesh" uid="uid://tafreukou5ko" path="res://ASSETS/arvore teste.obj" id="6_g644h"]
+[ext_resource type="PackedScene" uid="uid://dk4fpd63a43bf" path="res://ASSETS/slender-fortress-ben-drowned/slender_fortress_-_ben_drowned.glb" id="7_h8n4k"]
+[ext_resource type="ArrayMesh" uid="uid://dblry1qymcncj" path="res://ASSETS/arvore4.obj" id="10_cp7ig"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0h1g7"]
-sky_top_color = Color(0, 0, 0, 1)
-sky_horizon_color = Color(0.2739279, 0.016455106, 0.0007350167, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_g644h"]
+sky_top_color = Color(1, 0, 0, 1)
+sky_horizon_color = Color(0.64705884, 0, 0, 1)
 
-[sub_resource type="Sky" id="Sky_rj4ge"]
-sky_material = SubResource("ProceduralSkyMaterial_0h1g7")
+[sub_resource type="Sky" id="Sky_h8n4k"]
+sky_material = SubResource("ProceduralSkyMaterial_g644h")
+process_mode = 1
 
 [sub_resource type="Environment" id="Environment_bljox"]
-background_mode = 1
-background_color = Color(0.02286219, 1.0904623e-08, 3.008172e-09, 1)
-background_energy_multiplier = 16.0
-sky = SubResource("Sky_rj4ge")
-tonemap_mode = 2
+background_mode = 2
+background_color = Color(1, 0, 0, 1)
+sky = SubResource("Sky_h8n4k")
+ambient_light_source = 2
+ambient_light_energy = 0.67
 glow_enabled = true
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_rj4ge"]
@@ -44,8 +48,88 @@ mesh = ExtResource("2_rj4ge")
 [node name="StaticBody3D" type="StaticBody3D" parent="Terreno2" unique_id=1456490459]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Terreno2/StaticBody3D" unique_id=1885163806]
-transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.0007003667, 0.0069838166, 0.003939092)
+transform = Transform3D(0.99999964, -0.00065276393, -0.00021749613, 0.00065294653, 0.9999993, 0.00087987934, 0.00021694726, -0.00088001485, 0.99999946, 0.0007003667, 0.0069838166, 0.003939092)
 shape = SubResource("ConcavePolygonShape3D_rj4ge")
+
+[node name="Arvore3" type="MeshInstance3D" parent="Terreno2/StaticBody3D" unique_id=1479500634]
+transform = Transform3D(0.024999995, 0, 0, 0, 0.05882352, 0, 0, 0, 0.024999995, 0.45794165, 0.4747388, 0.07712716)
+mesh = ExtResource("3_1fe1v")
+
+[node name="Arvore2" type="MeshInstance3D" parent="Terreno2/StaticBody3D" unique_id=1342443575]
+transform = Transform3D(0.024999993, 0, 0, 0, 0.058823515, 0, 0, 0, 0.024999993, 0.09050819, 0.5974239, 0.43518785)
+mesh = ExtResource("4_cp7ig")
+
+[node name="Arvore4" type="MeshInstance3D" parent="Terreno2/StaticBody3D" unique_id=1732268385]
+transform = Transform3D(0.024999999, 0, 0, 0, 0.058823526, 0, 0, 0, 0.024999999, 0.49771395, 0.52549475, -0.060644146)
+mesh = ExtResource("3_1fe1v")
+
+[node name="Arvore5" type="MeshInstance3D" parent="Terreno2/StaticBody3D" unique_id=1239705513]
+transform = Transform3D(0.024999999, 0, 0, 0, 0.058823526, 0, 0, 0, 0.024999999, -0.39601478, 0.5245168, -0.09305458)
+mesh = ExtResource("3_1fe1v")
+
+[node name="Arvore6" type="MeshInstance3D" parent="Terreno2/StaticBody3D" unique_id=335107032]
+transform = Transform3D(0.024999999, 0, 0, 0, 0.058823526, 0, 0, 0, 0.024999999, 0.13833392, 0.49013096, -0.27197862)
+mesh = ExtResource("3_1fe1v")
+
+[node name="Arvore7" type="MeshInstance3D" parent="Terreno2/StaticBody3D" unique_id=935138647]
+transform = Transform3D(0.024999997, 0, 0, 0, 0.058823522, 0, 0, 0, 0.024999997, 0.3848255, 0.601239, 0.5716598)
+mesh = ExtResource("3_1fe1v")
+
+[node name="Arvore8" type="MeshInstance3D" parent="Terreno2/StaticBody3D" unique_id=508849119]
+transform = Transform3D(0.024999999, 0, 0, 0, 0.058823526, 0, 0, 0, 0.024999999, -0.7279759, 0.5114658, -0.35800207)
+mesh = ExtResource("3_1fe1v")
+
+[node name="Arvore9" type="MeshInstance3D" parent="Terreno2/StaticBody3D" unique_id=1271636753]
+transform = Transform3D(0.024999999, 0, 0, 0, 0.058823526, 0, 0, 0, 0.024999999, -0.8255773, 0.7149365, 0.5822244)
+mesh = ExtResource("4_cp7ig")
+
+[node name="Arvore10" type="MeshInstance3D" parent="Terreno2/StaticBody3D" unique_id=405096814]
+transform = Transform3D(0.024999997, 0, 0, 0, 0.058823522, 0, 0, 0, 0.024999997, 0.69685555, 0.5669934, 0.6842135)
+mesh = ExtResource("3_1fe1v")
+
+[node name="Arvore11" type="MeshInstance3D" parent="Terreno2/StaticBody3D" unique_id=596797240]
+transform = Transform3D(0.024999999, 0, 0, 0, 0.058823526, 0, 0, 0, 0.024999999, -0.053758092, 0.45098686, -0.84850323)
+mesh = ExtResource("4_cp7ig")
+
+[node name="Arvore12" type="MeshInstance3D" parent="Terreno2/StaticBody3D" unique_id=1133159327]
+transform = Transform3D(0.024999999, 0, 0, 0, 0.058823526, 0, 0, 0, 0.024999999, -1.0589682, 0.52071625, -0.5527698)
+mesh = ExtResource("3_1fe1v")
+
+[node name="Arvore13" type="MeshInstance3D" parent="Terreno2/StaticBody3D" unique_id=1723807717]
+transform = Transform3D(0.024999999, 0, 0, 0, 0.058823526, 0, 0, 0, 0.024999999, 0.19407381, 0.6166616, 0.11990028)
+mesh = ExtResource("4_cp7ig")
+
+[node name="Arvore14" type="MeshInstance3D" parent="Terreno2/StaticBody3D" unique_id=4023428]
+transform = Transform3D(0.024999999, 0, 0, 0, 0.058823526, 0, 0, 0, 0.024999999, -0.038833715, 0.5834445, 0.14550015)
+mesh = ExtResource("3_1fe1v")
+
+[node name="Arvore15" type="MeshInstance3D" parent="Terreno2/StaticBody3D" unique_id=669006026]
+transform = Transform3D(0.024999999, 0, 0, 0, 0.058823526, 0, 0, 0, 0.024999999, 0.5691099, 0.4768933, -0.43101916)
+mesh = ExtResource("4_cp7ig")
+
+[node name="Arvore16" type="MeshInstance3D" parent="Terreno2/StaticBody3D" unique_id=947342917]
+transform = Transform3D(0.024999999, 0, 0, 0, 0.058823526, 0, 0, 0, 0.024999999, 0.019621752, 0.50734395, -0.3745232)
+mesh = ExtResource("4_cp7ig")
+
+[node name="Arvore17" type="MeshInstance3D" parent="Terreno2/StaticBody3D" unique_id=1443006931]
+transform = Transform3D(0.024999999, 0, 0, 0, 0.058823526, 0, 0, 0, 0.024999999, 0.990976, 0.57086885, 0.20735747)
+mesh = ExtResource("4_cp7ig")
+
+[node name="Arvore18" type="MeshInstance3D" parent="Terreno2/StaticBody3D" unique_id=1847900549]
+transform = Transform3D(0.024999999, 0, 0, 0, 0.058823526, 0, 0, 0, 0.024999999, -0.74857, 0.5271989, -0.6926026)
+mesh = ExtResource("4_cp7ig")
+
+[node name="Arvore19" type="MeshInstance3D" parent="Terreno2/StaticBody3D" unique_id=2098347529]
+transform = Transform3D(0.024999999, 0, 0, 0, 0.058823526, 0, 0, 0, 0.024999999, -0.6066692, 0.59822863, 0.493719)
+mesh = ExtResource("10_cp7ig")
+
+[node name="Arvore20" type="MeshInstance3D" parent="Terreno2/StaticBody3D" unique_id=604611930]
+transform = Transform3D(0.024999999, 0, 0, 0, 0.058823526, 0, 0, 0, 0.024999999, -0.4741915, 0.6287067, 0.40608114)
+mesh = ExtResource("3_1fe1v")
+
+[node name="Arvore21" type="MeshInstance3D" parent="Terreno2/StaticBody3D" unique_id=1262056501]
+transform = Transform3D(0.024999999, 0, 0, 0, 0.058823526, 0, 0, 0, 0.024999999, -0.49035463, 0.72625107, 0.70669955)
+mesh = ExtResource("4_cp7ig")
 
 [node name="Dino Bocchi Plushie" parent="." unique_id=1557194307 instance=ExtResource("3_bljox")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -125.95764, -0.966115, 1.5794449)
@@ -66,4 +150,40 @@ shape = SubResource("ConcavePolygonShape3D_g644h")
 [node name="Dino Bocchi Plushie2" parent="." unique_id=1912492580 instance=ExtResource("3_bljox")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.100817546, -2.005526, 4.4237504)
 
+[node name="Sketchfab_Scene" parent="." unique_id=979634264 instance=ExtResource("7_h8n4k")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -4.271216, -2.7713299, -3.5974345)
+
+[node name="Arvore3" type="MeshInstance3D" parent="." unique_id=147418958]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.465976, -3.2690363, -20.795168)
+mesh = ExtResource("3_1fe1v")
+
+[node name="ArvoreTeste2" type="MeshInstance3D" parent="." unique_id=135259107]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -5.064671, -0.7555753, 17.65701)
+mesh = ExtResource("6_g644h")
+
+[node name="Arvore2" type="MeshInstance3D" parent="." unique_id=1808818723]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.56993, -4.9712133, -16.723366)
+mesh = ExtResource("4_cp7ig")
+
+[node name="Arvore4" type="MeshInstance3D" parent="." unique_id=382077693]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.722428, -2.6497989, 10.687894)
+mesh = ExtResource("3_1fe1v")
+
+[node name="Arvore5" type="MeshInstance3D" parent="." unique_id=1527598027]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.830233, -5.0261283, -4.8379664)
+mesh = ExtResource("4_cp7ig")
+
+[node name="Arvore6" type="MeshInstance3D" parent="." unique_id=1590261485]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.683099, -2.4389648, -12.286221)
+mesh = ExtResource("3_1fe1v")
+
+[node name="Arvore7" type="MeshInstance3D" parent="." unique_id=824516531]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.148531, -3.6524403, -25.755796)
+mesh = ExtResource("10_cp7ig")
+
+[node name="Arvore8" type="MeshInstance3D" parent="." unique_id=287416161]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.566023, -3.0395377, 5.344275)
+mesh = ExtResource("4_cp7ig")
+
+[editable path="CharacterBody3D"]
 [editable path="CanvasLayer"]
