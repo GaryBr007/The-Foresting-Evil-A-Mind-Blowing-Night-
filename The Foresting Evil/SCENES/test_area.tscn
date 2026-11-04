@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dq2nqquwd7xfx"]
 
-[ext_resource type="ArrayMesh" uid="uid://tafreukou5ko" path="res://ASSETS/arvore teste.obj" id="1_ehk2i"]
+[ext_resource type="ArrayMesh" uid="uid://tafreukou5ko" path="res://ASSETS/Arvores/arvore teste.obj" id="1_ehk2i"]
 [ext_resource type="PackedScene" uid="uid://cl3jg7rul0dep" path="res://SCENES/character.tscn" id="2_emj6k"]
 [ext_resource type="PackedScene" uid="uid://bgvxtbjek4h65" path="res://SCENES/hud.tscn" id="3_uq18d"]
 [ext_resource type="PackedScene" uid="uid://drv4n6uaticst" path="res://SCENES/pause_menu.tscn" id="4_6as45"]
