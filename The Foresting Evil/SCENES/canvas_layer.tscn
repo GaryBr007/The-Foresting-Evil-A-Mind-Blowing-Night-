@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://coqffsy257vh5"]
 
-[ext_resource type="Shader" uid="uid://b3m0un5gsnlj7" path="res://psx_tela.gdshader" id="1_s6wd6"]
+[ext_resource type="Shader" uid="uid://b3m0un5gsnlj7" path="res://SHADERS/psx_tela.gdshader" id="1_s6wd6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_gshwq"]
 shader = ExtResource("1_s6wd6")
