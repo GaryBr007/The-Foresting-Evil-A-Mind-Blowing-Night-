@@ -151,5 +151,4 @@ target_position = Vector3(0, 1, 0)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2076943314]
 stream = ExtResource("1_xiv2o")
-autoplay = true
 parameters/looping = true
