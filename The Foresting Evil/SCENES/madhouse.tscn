@@ -15,7 +15,8 @@
 [ext_resource type="Script" uid="uid://b4hap22n2aybd" path="res://SCRIPTS/color_rect.gd" id="13_iusyo"]
 [ext_resource type="ArrayMesh" uid="uid://ku21p2kiih2q" path="res://ASSETS/Cabanarocheda2.obj" id="14_sirdb"]
 [ext_resource type="Shader" uid="uid://dcnj45u6mfae2" path="res://SHADERS/psx_objeto.gdshader" id="14_u11vg"]
-[ext_resource type="ArrayMesh" uid="uid://c48ysaqm3pmv7" path="res://ASSETS/3DMODELS/fogueira.obj" id="16_6nhdj"]
+[ext_resource type="PackedScene" uid="uid://buax0wm6yaf3n" path="res://SCENES/fogueira.tscn" id="16_2w74y"]
+[ext_resource type="ArrayMesh" uid="uid://cj2t076bbgs1b" path="res://ASSETS/3DMODELS/montanhas.obj" id="17_2w74y"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_g644h"]
 sky_top_color = Color(1, 0, 0, 1)
@@ -418,7 +419,7 @@ transform = Transform3D(0.99999994, 0, -2.9802322e-08, 0, 0.99999994, 0, 2.98023
 shape = SubResource("ConcavePolygonShape3D_cp7ig")
 
 [node name="ArvorePequena3" type="MeshInstance3D" parent="Arvores" unique_id=637996212]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.961721, -1.9323517, 6.14036)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.961721, -2.486748, 6.14036)
 mesh = ExtResource("3_kimso")
 skeleton = NodePath("../..")
 
@@ -458,7 +459,7 @@ skeleton = NodePath("../..")
 shape = SubResource("ConcavePolygonShape3D_kimso")
 
 [node name="ArvorePequena8" type="MeshInstance3D" parent="Arvores" unique_id=1392703077]
-transform = Transform3D(0.47291985, 0, -0.8811054, 0, 1, 0, 0.8811054, 0, 0.47291985, 26.505936, -1.9323517, 8.230567)
+transform = Transform3D(0.47291985, 0, -0.8811054, 0, 1, 0, 0.8811054, 0, 0.47291985, 26.505936, -2.7771635, 8.230567)
 mesh = ExtResource("3_kimso")
 skeleton = NodePath("../..")
 
@@ -508,7 +509,7 @@ skeleton = NodePath("../..")
 shape = SubResource("ConcavePolygonShape3D_kimso")
 
 [node name="ArvorePequena5" type="MeshInstance3D" parent="Arvores" unique_id=1915153878]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.19286, -1.9323517, -11.703081)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.19286, -3.5021286, -11.703081)
 mesh = ExtResource("3_kimso")
 skeleton = NodePath("../..")
 
@@ -592,9 +593,12 @@ mesh = ExtResource("14_sirdb")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cabanarocheda2/StaticBody3D" unique_id=591950621]
 shape = SubResource("ConcavePolygonShape3D_u11vg")
 
-[node name="Fogueira" type="MeshInstance3D" parent="." unique_id=1016866078]
+[node name="Fogueira" parent="." unique_id=1279246558 instance=ExtResource("16_2w74y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2040749, 0.70672876, 41.29539)
-mesh = ExtResource("16_6nhdj")
+
+[node name="Montanhas" type="MeshInstance3D" parent="." unique_id=1365000608]
+transform = Transform3D(80, 0, 0, 0, 80, 0, 0, 0, 80, -234.63814, -6.0959826, -6.0250397)
+mesh = ExtResource("17_2w74y")
 
 [editable path="CharacterBody3D"]
 [editable path="CanvasLayer"]
